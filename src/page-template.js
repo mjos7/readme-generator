@@ -1,20 +1,29 @@
 const generatePage = readMeInput => {
   return `
-  # ${projectTitle}
+  # ${projectName}
 
   ## General
   Git Page - Deployed Application
   ${deployedApplication}
+
+  ${licenseBadge}
   
   Screenshot of Mockup
   ![Screenshot of Mockup](${mockupLink})
 
 
   ## Description   
-  ${description}
+  ${projDescription}
 
   ## Table of Contents   
-  ${tableOfContents}
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributions](#contributions)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
 
   ## Installation
   ${installation}
@@ -33,7 +42,7 @@ const generatePage = readMeInput => {
   ${tests}
 
   ## Questions
-  ${questions}
+  For any questions, please don't hesitate to reach out to ${githubUrl} at ${email}
 
     `;
 };
