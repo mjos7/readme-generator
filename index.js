@@ -153,7 +153,7 @@ function writeToFile(data) {
       resolve({
         ok: true,
         message:
-          'Your REAdME.md file has been created in the distribution folder',
+          'Your REAdME.md file has been cre ated in the distribution folder',
       });
     });
   });
