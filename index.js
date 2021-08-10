@@ -8,11 +8,7 @@ const promptUser = () => {
   return inquirer.prompt(questions);
 };
 
-// STARTER CODE START //
-
-// TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -146,22 +142,24 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(data) {
   return new Promise((resolve, reject) => {
-    fs.writeFile('src/README.md', data, err => {
+    fs.writeFile('dist/README.md', data, err => {
       if (err) {
-        console.log('There is an error');
+        reject(err);
         return;
       }
       resolve({
-        message: 'Your REAdME.md file has been created in the source folder',
+        ok: true,
+        message:
+          'Your REAdME.md file has been created in the distribution folder',
       });
     });
   });
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
   promptUser().then(data => writeToFile(generateMarkdown(data)));
 }
